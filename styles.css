@@ -1,0 +1,58 @@
+body {
+    background-color: #e9dfe5;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+h1{
+    font-size: 24px;
+    color: #513743;
+    text-align: center;
+}
+
+p {
+    color: #5f414b;
+}
+
+.koto-image {
+    width: 50%;
+    margin: 20px auto;
+    display: block;
+}
+
+.video-container {
+    margin: 20px 0;
+}
+
+.tableau-container {
+    margin: 20px 0;
+}
+
+nav {
+    background-color: #e9dfe5;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display:inherit;
+    color: #640125;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: underline;
+}
+
+nav li a:hover {
+    background-color: #d4acad;
+}

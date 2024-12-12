@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+
+    <li><a href="index.html">Home</a></li>
+    <li><a href="smallwebapp.html">Web app</a></li>
+    <li><a href="scratchpage.html">Scratch Page</a></li>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .game-container {
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f6bfbc;
+        }
+
+        #guessInput {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #guessButton {
+            padding: 10px 20px;
+            background-color: #96514d;
+            color: #e4d2d8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Guess the Number</h1>
+        <p>Guess a number between 1 and 100:</p>
+        <input type="number" id="guessInput">
+        <button id="guessButton">Guess</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        const guessInput = document.getElementById('guessInput');
+        const guessButton = document.getElementById('guessButton');
+        const message = document.getElementById('message');
+
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        guessButton.addEventListener('click', () => {
+            const userGuess = parseInt(guessInput.value);
+            attempts++;
+
+            if (userGuess === randomNumber) {
+                message.textContent = 'Congratulations! You guessed the right number!';
+                guessInput.disabled = true;
+                guessButton.disabled = true;
+            } else if (userGuess < randomNumber) {
+                message.textContent = 'Too low. Try again.';
+            } else {
+                message.textContent = 'Too high. Try again';
+            }
+        });
+    </script>
+</body>
+</html>
